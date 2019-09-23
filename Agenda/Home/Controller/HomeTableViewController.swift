@@ -44,7 +44,7 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate, NSFet
         }) { (error) in
             print(error.localizedDescription)
         }
-       
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -149,14 +149,20 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate, NSFet
         if editingStyle == .delete {
             // Delete the row from the data source
             guard let alunoSelecionado = gerenciadorDeResultado?.fetchedObjects![indexPath.row] else {return}
-            
-            contexto.delete(alunoSelecionado)
-            do {
-                try contexto.save()
-            } catch {
-                print(error.localizedDescription)
+            AutenticacaoLocal().autorizaUsuario { (autenticado) in
+                if autenticado {
+                    DispatchQueue.main.async {
+                        self.contexto.delete(alunoSelecionado)
+                        do {
+                            try self.contexto.save()
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                        self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    }
+                }
             }
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

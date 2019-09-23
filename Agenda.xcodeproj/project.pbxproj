@@ -22,6 +22,7 @@
 		E96C1BC0232EB64C00E3EF7B /* MenuOpcoesAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C1BBF232EB64C00E3EF7B /* MenuOpcoesAlunos.swift */; };
 		E96C1BC2232EBD7700E3EF7B /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C1BC1232EBD7700E3EF7B /* Mensagem.swift */; };
 		E985EF3223208E0200EFE56D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985EF3123208E0200EFE56D /* ImagePicker.swift */; };
+		E9C9D5F723398B4B00C2919C /* AutenticacaoLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9D5F623398B4B00C2919C /* AutenticacaoLocal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E96C1BBF232EB64C00E3EF7B /* MenuOpcoesAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpcoesAlunos.swift; sourceTree = "<group>"; };
 		E96C1BC1232EBD7700E3EF7B /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		E985EF3123208E0200EFE56D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E9C9D5F623398B4B00C2919C /* AutenticacaoLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutenticacaoLocal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				E96C1BC1232EBD7700E3EF7B /* Mensagem.swift */,
 				E962ACDB233595D200375850 /* Localizacao.swift */,
 				E95E2725233808DC00B8666B /* Notificacoes.swift */,
+				E9C9D5F623398B4B00C2919C /* AutenticacaoLocal.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				E95E27212337EBF600B8666B /* MapaViewController.swift in Sources */,
 				03AA174E1FC84154003CB2B8 /* AppDelegate.swift in Sources */,
 				E962ACDC233595D200375850 /* Localizacao.swift in Sources */,
+				E9C9D5F723398B4B00C2919C /* AutenticacaoLocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
