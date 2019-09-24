@@ -59,10 +59,14 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate, NSFet
         self.navigationItem.searchController = searchController
     }
     
-    func recuperarAlunos() {
+    func recuperarAlunos(_ filtro: String = "") {
         let pesquisarAluno: NSFetchRequest<Aluno> = Aluno.fetchRequest()
         let ordenaAluno = NSSortDescriptor(key: "nome", ascending: true)
         pesquisarAluno.sortDescriptors = [ordenaAluno]
+        
+        if verificaFiltro(filtro){
+            pesquisarAluno.predicate = self.pesquisarAluno(filtro)
+        }
         
         gerenciadorDeResultado = NSFetchedResultsController(fetchRequest: pesquisarAluno, managedObjectContext: contexto, sectionNameKeyPath: nil, cacheName: nil)
         gerenciadorDeResultado?.delegate = self
@@ -73,6 +77,14 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate, NSFet
             print(error.localizedDescription)
         }
         
+    }
+    
+    func verificaFiltro(_ filtro: String) -> Bool {
+        return !filtro.isEmpty
+    }
+    
+    func pesquisarAluno(_ filtro: String) -> NSPredicate {
+        return NSPredicate(format: "nome CONTAINS %@", filtro)
     }
     
     @objc func abrirMenuDeOpcoes(_ longPress: UILongPressGestureRecognizer) {
@@ -188,5 +200,19 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate, NSFet
             self.tableView.reloadData()
         }
     }
+    
+    // MARK: - SearchDelegate
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let texto = searchBar.text else { return }
+        recuperarAlunos(texto)
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        recuperarAlunos()
+        tableView.reloadData()
+    }
+    
     
 }
