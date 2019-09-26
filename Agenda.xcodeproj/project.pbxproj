@@ -18,6 +18,7 @@
 		E95E27212337EBF600B8666B /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E27202337EBF600B8666B /* MapaViewController.swift */; };
 		E95E27242337FC3B00B8666B /* CalculaMediaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E27232337FC3B00B8666B /* CalculaMediaApi.swift */; };
 		E95E2726233808DC00B8666B /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E2725233808DC00B8666B /* Notificacoes.swift */; };
+		E95EC3DD233AD7CC007A7C8A /* Pino.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EC3DC233AD7CC007A7C8A /* Pino.swift */; };
 		E962ACDC233595D200375850 /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962ACDB233595D200375850 /* Localizacao.swift */; };
 		E96C1BC0232EB64C00E3EF7B /* MenuOpcoesAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C1BBF232EB64C00E3EF7B /* MenuOpcoesAlunos.swift */; };
 		E96C1BC2232EBD7700E3EF7B /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C1BC1232EBD7700E3EF7B /* Mensagem.swift */; };
@@ -39,6 +40,7 @@
 		E95E27202337EBF600B8666B /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		E95E27232337FC3B00B8666B /* CalculaMediaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaMediaApi.swift; sourceTree = "<group>"; };
 		E95E2725233808DC00B8666B /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
+		E95EC3DC233AD7CC007A7C8A /* Pino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pino.swift; sourceTree = "<group>"; };
 		E962ACDB233595D200375850 /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		E96C1BBF232EB64C00E3EF7B /* MenuOpcoesAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpcoesAlunos.swift; sourceTree = "<group>"; };
 		E96C1BC1232EBD7700E3EF7B /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		E95E271E2337EBC200B8666B /* Mapa */ = {
 			isa = PBXGroup;
 			children = (
+				E95EC3DB233AD7B7007A7C8A /* Model */,
 				E95E271F2337EBD400B8666B /* Controller */,
 			);
 			path = Mapa;
@@ -162,6 +165,14 @@
 				E95E27232337FC3B00B8666B /* CalculaMediaApi.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E95EC3DB233AD7B7007A7C8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E95EC3DC233AD7CC007A7C8A /* Pino.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E985EF3023208DD200EFE56D /* Componentes */ = {
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03AA176D1FC8515A003CB2B8 /* AlunoViewController.swift in Sources */,
+				E95EC3DD233AD7CC007A7C8A /* Pino.swift in Sources */,
 				03AA17661FC84353003CB2B8 /* HomeTableViewController.swift in Sources */,
 				03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */,
 				E96C1BC0232EB64C00E3EF7B /* MenuOpcoesAlunos.swift in Sources */,
